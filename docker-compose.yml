@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  flask-api-boilerplate:
+    container_name: flask-api-boilerplate
+    hostname: flask-api-boilerplate
+    restart: always
+    build: .
+    volumes:
+      - ./app:/app
+    working_dir: /app
+
+  #Other services
+
+  

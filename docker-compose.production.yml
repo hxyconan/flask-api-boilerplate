@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  flask-api-boilerplate:
+    environment:
+      - RUNNING_MODE=production
+    command: > #multiple commands
+      sh -c "nginx &&
+             uwsgi --ini uwsgi.ini"
+    ports: #port to nginx port 80
+      - 8006:80
+
+  #Other services
+
+  
