@@ -11,8 +11,8 @@ MAINTAINER Bob Huang version: 0.1
 # Install dependencies
 RUN apk add --no-cache \
   gcc libc-dev linux-headers \
-  bash git nginx uwsgi uwsgi-python python2-dev py2-pip \
-  && pip2 install --upgrade pip
+  bash git nginx uwsgi uwsgi-python python3-dev py3-pip \
+  && pip3 install --upgrade pip
 
 # Install uwsgi installation required gcc etc packages
 RUN apk add --no-cache --virtual .build-deps \
@@ -22,7 +22,7 @@ RUN apk add --no-cache --virtual .build-deps \
 
 # Install requirements.txt globally
 COPY requirements.txt /requirements.txt
-RUN pip install -r /requirements.txt
+RUN pip3 install -r /requirements.txt
 
 # Remove gcc
 RUN apk del .build-deps

@@ -9,6 +9,10 @@
 - `Development` mode start the application via `python app.py` and you can debug code change without restart
 - Extra docker containers could add into docker-compose.yml file if required, for example, mysql, redis etc.
 
+## Python version
+- Git master branch HEAD for python3 installation
+- Python 2 codes tagged as python2
+
 ## Specification
 - Docker image based on `alpine:3.10`
 - Python 2.7 will be installed

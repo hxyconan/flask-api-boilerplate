@@ -4,7 +4,7 @@ services:
   flask-api-boilerplate:
     environment:
       - RUNNING_MODE=development
-    command: ["python2", "app.py"]
+    command: ["python3", "app.py"]
     ports: #port to python web application running port 80
       - 8016:80
 
